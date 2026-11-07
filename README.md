@@ -4,6 +4,10 @@ Site de uma loja de roupas, calçados e acessórios esportivos, com carrinho de 
 
 Projeto em grupo, desenvolvido em 2026.
 
+<p align="center">
+  <img src="docs/tela-inicial.png" alt="Página inicial do FitZone, com banner escuro, busca de produtos e menu" width="800">
+</p>
+
 ## Funcionalidades
 
 **Loja**
