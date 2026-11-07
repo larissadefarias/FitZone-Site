@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/trabalhe.css">
+    <title>Trabalhe Conosco | FitZone</title>
+</head>
+
+<body>
+    <!-- ==================== CABEÇALHO ==================== -->
+    <header class="site-header">
+
+        <nav class="nav-bar" aria-label="Navegação principal">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo" aria-label="Página inicial da FitZone">
+
+                <img class="img-logo logo-clara" src="img/logo.png" alt="FitZone">
+
+                <img class="img-logo logo-escura" src="img/logo-claro.png" alt="FitZone">
+
+            </a>
+
+            <!-- PESQUISA -->
+            <form class="search-box" role="search">
+
+                <input class="box-search" type="search" placeholder="Pesquisar produtos..."
+                    aria-label="Pesquisar produtos">
+
+                <button class="search-button" type="submit" aria-label="Pesquisar">
+                    <img src="img/search.png" alt="">
+                </button>
+
+            </form>
+
+            <!-- NAVEGAÇÃO -->
+            <ul class="nav-list">
+
+                <!-- PRODUTOS -->
+                <li class="dropdown">
+
+                    <button class="submenu" type="button" aria-expanded="false">
+                        Produtos
+                        <span class="seta-menu"></span>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="index.html#produtos">Tênis</a>
+                        <a href="index.html#produtos">Camisas</a>
+                        <a href="index.html#produtos">Leggings</a>
+                        <a href="index.html#novidades">Chuteiras</a>
+                    </div>
+
+                </li>
+
+                <!-- SOBRE NÓS -->
+                <li class="dropdown">
+
+                    <button class="submenu" type="button" aria-expanded="false">
+                        Sobre Nós
+                        <span class="seta-menu"></span>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="index.html">FitZone</a>
+                        <a href="sobre.html">Nossa história</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+
+                </li>
+
+                <!-- PROMOÇÕES -->
+                <li>
+                    <a class="nav-link destaque" href="index.html#promocoes">
+                        Promoções
+                    </a>
+                </li>
+
+                <!-- CARRINHO -->
+                <li class="icon-carrinho">
+
+                    <button class="icon-button button-carrinho" type="button" aria-label="Abrir carrinho">
+                        <img class="img-carrinho" src="img/carrinho.png" alt="">
+
+                        <span id="contador-carrinho" class="contador-carrinho">
+                            0
+                        </span>
+                    </button>
+
+                </li>
+
+                <!-- LOGIN -->
+                <li class="icon-login">
+
+                    <a class="icon-button button-login" href="login.html" aria-label="Entrar na conta">
+                        <img class="img-login" src="img/login.png" alt="">
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!-- MODO ESCURO -->
+            <button class="theme-btn" id="theme-button" type="button" aria-label="Alternar entre tema claro e escuro">
+                <img src="img/darkmode.png" alt="" class="icone-tema">
+            </button>
+
+            <!-- MENU MOBILE -->
+            <button class="menu-mobile-btn" id="menu-mobile-btn" type="button" aria-label="Abrir menu"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+    </header>
+    <!-- ==================== BANNER ==================== -->
+    <main>
+        <section class="banner-trabalhe">
+            <img class="banner-trabalhe-imagem" src="img/fitzone.jpg.png" alt="Academia FitZone">
+            <div class="banner-overlay"></div>
+            <div class="banner-conteudo">
+                <span>FAÇA PARTE DA NOSSA EQUIPE</span>
+                <p>
+                    Junte-se a uma equipe que acredita no esporte,
+                    na inovação e no poder de transformar objetivos
+                    em grandes conquistas.
+                </p>
+                <a href="#candidatura" class="botao-principal">
+                    Enviar candidatura
+                    <span>→</span>
+                </a>
+            </div>
+        </section>
+        <!-- ==================== APRESENTAÇÃO ==================== -->
+        <section class="apresentacao">
+            <div class="apresentacao-container">
+                <div class="apresentacao-titulo">
+                    <span class="subtitulo">
+                        VENHA CRESCER COM A GENTE
+                    </span>
+                    <h2>
+                        Pessoas movem a FitZone.
+                    </h2>
+                </div>
+                <div class="apresentacao-texto">
+                    <p>
+                        Na FitZone, acreditamos que grandes resultados começam
+                        com pessoas comprometidas, criativas e apaixonadas pelo
+                        que fazem. Buscamos profissionais que tenham vontade de
+                        aprender, compartilhar conhecimentos, enfrentar novos
+                        desafios e contribuir para a construção de experiências
+                        cada vez melhores para nossos clientes.
+                    </p>
+                    <p>
+                        Valorizamos diferentes ideias, histórias e habilidades.
+                        Queremos construir um ambiente de trabalho colaborativo,
+                        respeitoso e dinâmico, onde cada pessoa tenha espaço para
+                        crescer profissionalmente, apresentar novas soluções e
+                        fazer parte da evolução da nossa marca.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== BENEFÍCIOS ==================== -->
+        <section class="beneficios">
+            <div class="secao-container">
+                <div class="titulo-secao">
+                    <span class="subtitulo">
+                        POR QUE TRABALHAR NA FITZONE?
+                    </span>
+                    <h2>
+                        Um lugar para aprender, evoluir e conquistar.
+                    </h2>
+                </div>
+                <div class="beneficios-grid">
+                    <article class="beneficio-card">
+                        <span class="numero">01</span>
+                        <div>
+                            <h3>Desenvolvimento</h3>
+                            <p>
+                                Incentivamos o aprendizado contínuo e o
+                                desenvolvimento de novas habilidades.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="beneficio-card">
+                        <span class="numero">02</span>
+                        <div>
+                            <h3>Trabalho em equipe</h3>
+                            <p>
+                                Valorizamos a colaboração, o respeito e a
+                                troca de conhecimentos entre todas as áreas.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="beneficio-card">
+                        <span class="numero">03</span>
+                        <div>
+                            <h3>Ambiente dinâmico</h3>
+                            <p>
+                                Trabalhamos com inovação, novos desafios e
+                                diferentes oportunidades de crescimento.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="beneficio-card">
+                        <span class="numero">04</span>
+                        <div>
+                            <h3>Valorização de ideias</h3>
+                            <p>
+                                Todas as pessoas podem contribuir com sugestões
+                                e participar da evolução da FitZone.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== ÁREAS ==================== -->
+        <section class="areas">
+            <div class="secao-container">
+                <div class="titulo-secao">
+                    <span class="subtitulo">
+                        ENCONTRE O SEU LUGAR
+                    </span>
+                    <h2>
+                        Áreas de atuação.
+                    </h2>
+                </div>
+                <div class="areas-grid">
+                    <article class="area-card">
+                        <span>01</span>
+                        <h3>Tecnologia</h3>
+                        <p>
+                            Desenvolvimento, suporte, dados e soluções digitais.
+                        </p>
+                    </article>
+                    <article class="area-card">
+                        <span>02</span>
+                        <h3>Atendimento</h3>
+                        <p>
+                            Suporte ao cliente e experiência de compra.
+                        </p>
+                    </article>
+                    <article class="area-card">
+                        <span>03</span>
+                        <h3>Marketing</h3>
+                        <p>
+                            Comunicação, conteúdo, design e redes sociais.
+                        </p>
+                    </article>
+                    <article class="area-card">
+                        <span>04</span>
+                        <h3>Administrativo</h3>
+                        <p>
+                            Recursos humanos, financeiro e operações.
+                        </p>
+                    </article>
+                    <article class="area-card">
+                        <span>05</span>
+                        <h3>Logística</h3>
+                        <p>
+                            Estoque, separação, organização e entregas.
+                        </p>
+                    </article>
+                    <article class="area-card">
+                        <span>06</span>
+                        <h3>Vendas</h3>
+                        <p>
+                            Atendimento comercial e relacionamento com clientes.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== FORMULÁRIO ==================== -->
+
+        <section class="candidatura" id="candidatura">
+
+            <div class="candidatura-container">
+
+                <div class="candidatura-texto">
+
+                    <span class="subtitulo">
+                        BANCO DE TALENTOS
+                    </span>
+
+                    <h2>
+                        Quer fazer parte da FitZone?
+                    </h2>
+
+                    <p>
+                        Preencha o formulário com seus dados e envie sua
+                        candidatura. Quando surgir uma oportunidade compatível
+                        com o seu perfil, nossa equipe poderá entrar em contato.
+                    </p>
+
+                    <div class="mensagem-destaque">
+                        <strong>Importante:</strong>
+
+                        <p>
+                            Certifique-se de preencher corretamente seus dados
+                            de contato e anexar um currículo atualizado.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form class="formulario-candidatura" id="form-candidatura">
+
+                    <div class="campo campo-completo">
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input type="tel" id="telefone" name="telefone" placeholder="(21) 99999-9999" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="cidade">
+                            Cidade
+                        </label>
+
+                        <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="area">
+                            Área de interesse
+                        </label>
+
+                        <select id="area" name="area" required>
+
+                            <option value="">
+                                Selecione uma área
+                            </option>
+
+                            <option value="tecnologia">
+                                Tecnologia
+                            </option>
+
+                            <option value="atendimento">
+                                Atendimento
+                            </option>
+
+                            <option value="marketing">
+                                Marketing
+                            </option>
+
+                            <option value="administrativo">
+                                Administrativo
+                            </option>
+
+                            <option value="logistica">
+                                Logística
+                            </option>
+
+                            <option value="vendas">
+                                Vendas
+                            </option>
+
+                            <option value="outra">
+                                Outra área
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="linkedin">
+                            LinkedIn ou portfólio
+                        </label>
+
+                        <input type="url" id="linkedin" name="linkedin"
+                            placeholder="https://linkedin.com/in/seu-perfil">
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="curriculo">
+                            Currículo
+                        </label>
+
+                        <label class="campo-arquivo" for="curriculo">
+
+                            <span class="arquivo-icone">↑</span>
+
+                            <div>
+                                <strong>Selecione seu currículo</strong>
+
+                                <small>
+                                    Arquivos em PDF, DOC ou DOCX
+                                </small>
+                            </div>
+
+                        </label>
+
+                        <input class="input-arquivo" type="file" id="curriculo" name="curriculo"
+                            accept=".pdf,.doc,.docx" required>
+
+                        <p class="nome-arquivo" id="nome-arquivo">
+                            Nenhum arquivo selecionado
+                        </p>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="mensagem">
+                            Conte um pouco sobre você
+                        </label>
+
+                        <textarea id="mensagem" name="mensagem" rows="6"
+                            placeholder="Fale sobre sua experiência, seus conhecimentos e por que deseja trabalhar na FitZone."
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label class="campo-termos">
+
+                            <input type="checkbox" id="termos" required>
+
+                            <span>
+                                Confirmo que as informações fornecidas são
+                                verdadeiras e autorizo o uso dos dados para
+                                fins de processo seletivo.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit" class="botao-enviar">
+                        Enviar candidatura
+                        <span>→</span>
+                    </button>
+
+
+                    <p class="mensagem-formulario" id="mensagem-formulario"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer class="rodape">
+        <div class="rodape-container">
+            <p>
+                © 2026 FitZone
+            </p>
+        </div>
+    </footer>
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script>
+
+        const inputCurriculo = document.querySelector("#curriculo");
+        const nomeArquivo = document.querySelector("#nome-arquivo");
+        const formulario = document.querySelector("#form-candidatura");
+        const mensagemFormulario = document.querySelector("#mensagem-formulario");
+
+        inputCurriculo.addEventListener("change", function () {
+
+            if (inputCurriculo.files.length > 0) {
+                nomeArquivo.textContent = inputCurriculo.files[0].name;
+            } else {
+                nomeArquivo.textContent = "Nenhum arquivo selecionado";
+            }
+
+        });
+
+
+        formulario.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            mensagemFormulario.textContent =
+                "Candidatura preenchida com sucesso!";
+
+            mensagemFormulario.classList.add("sucesso");
+
+            formulario.reset();
+
+            nomeArquivo.textContent =
+                "Nenhum arquivo selecionado";
+
+        });
+
+    </script>
+    <script src="header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,732 @@
+/* VARIAVEIS E RESET */
+:root {
+    --primary: #c94f5a;
+    --primary-dark: #9f3540;
+    --accent: #f4b942;
+    --bg: #f7f7f9;
+    --surface: #fff;
+    --surface-soft: #f0f1f4;
+    --text: #1d1f24;
+    --muted: #696d76;
+    --border: #e3e4e8;
+    --shadow: 0 18px 50px rgba(28, 31, 38, .10);
+    --radius: 20px;
+    --header-h: 88px;
+
+    --dark: #101113;
+    /* ADICIONE ESTA LINHA */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    transition: .3s
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+body.dark-mode {
+    --primary: #e17880;
+    --primary-dark: #bb535c;
+    --bg: #151619;
+    --surface: #202226;
+    --surface-soft: #292c31;
+    --text: #f4f4f5;
+    --muted: #b1b4bb;
+    --border: #34373d;
+    --shadow: 0 18px 50px rgba(0, 0, 0, .35)
+}
+
+/* ==================== BANNER TRABALHE CONOSCO ==================== */
+
+.banner-trabalhe {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--header-h));
+    min-height: 650px;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+    background: #08090a;
+}
+
+.banner-trabalhe-imagem {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.64) 48%,
+            rgba(0, 0, 0, 0.14) 100%),
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            transparent 55%);
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 2;
+
+    width: min(1380px, 88%);
+    margin: 0 auto;
+    padding: 90px 0 100px;
+
+    color: white;
+}
+
+.banner-conteudo>span {
+    display: inline-block;
+    margin-bottom: 22px;
+
+    color: #ef747e;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.banner-conteudo h1 {
+    max-width: 1050px;
+
+    font-size: clamp(4.5rem, 9vw, 9rem);
+    font-weight: 950;
+    line-height: 0.82;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+}
+
+.banner-conteudo p {
+    max-width: 650px;
+    margin-top: 32px;
+
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.botao-principal {
+    width: fit-content;
+    margin-top: 34px;
+    padding: 16px 25px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 999px;
+    font-weight: 850;
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.botao-principal:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.botao-principal span {
+    transition: transform 0.25s;
+}
+
+.botao-principal:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==================== ELEMENTOS GERAIS ==================== */
+
+.secao-container {
+    width: min(1200px, 88%);
+    margin: auto;
+}
+
+.subtitulo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.titulo-secao {
+    max-width: 900px;
+    margin-bottom: 70px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+
+/* ==================== APRESENTAÇÃO ==================== */
+
+.apresentacao {
+    padding: 130px 0;
+    background: var(--surface);
+}
+
+.apresentacao-container {
+    width: min(1200px, 88%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.apresentacao-titulo h2 {
+    max-width: 600px;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -5px;
+}
+
+.apresentacao-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.apresentacao-texto p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+
+/* ==================== BENEFÍCIOS ==================== */
+
+.beneficios {
+    padding: 130px 0;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.beneficio-card {
+    min-height: 280px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.beneficio-card .numero {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.beneficio-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.beneficio-card p {
+    max-width: 420px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* ==================== ÁREAS ==================== */
+
+.areas {
+    padding: 130px 0;
+    background: var(--dark);
+    color: white;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.area-card {
+    min-height: 310px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition: background 0.3s;
+}
+
+.area-card:hover {
+    background: var(--primary);
+}
+
+.area-card span {
+    margin-bottom: auto;
+
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.area-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.area-card p {
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+}
+
+.area-card:hover p {
+    color: white;
+}
+
+
+/* ==================== FORMULÁRIO ==================== */
+
+.candidatura {
+    padding: 130px 0;
+    background: var(--surface);
+}
+
+.candidatura-container {
+    width: min(1200px, 88%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+}
+
+.candidatura-texto {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+}
+
+.candidatura-texto h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -5px;
+}
+
+.candidatura-texto>p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.mensagem-destaque {
+    margin-top: 35px;
+    padding: 22px;
+
+    background: var(--surface-soft);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 14px 14px 0;
+}
+
+.mensagem-destaque strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.mensagem-destaque p {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.formulario-candidatura {
+    padding: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 15px 17px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(201, 79, 90, 0.12);
+}
+
+.input-arquivo {
+    display: none;
+}
+
+.campo-arquivo {
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.campo-arquivo:hover {
+    border-color: var(--primary);
+}
+
+.arquivo-icone {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--surface-soft);
+    color: var(--primary);
+
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.campo-arquivo div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.campo-arquivo small,
+.nome-arquivo {
+    color: var(--muted);
+}
+
+.nome-arquivo {
+    font-size: 0.85rem;
+}
+
+.campo-termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: var(--muted);
+    font-weight: 400 !important;
+    line-height: 1.6;
+}
+
+.campo-termos input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    accent-color: var(--primary);
+}
+
+.botao-enviar {
+    grid-column: 1 / -1;
+
+    padding: 17px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    background: var(--primary);
+    color: white;
+    border: 0;
+    border-radius: 999px;
+
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.botao-enviar:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.mensagem-formulario {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.mensagem-formulario.sucesso {
+    padding: 12px;
+    color: #186f42;
+    background: #e2f6eb;
+    border-radius: 10px;
+}
+
+
+/* ==================== RODAPÉ ==================== */
+
+.rodape {
+    padding: 45px 0;
+    background: #0d0e10;
+    color: white;
+}
+
+.rodape-container {
+    position: relative;
+    width: min(1200px, 88%);
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape-container p {
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 900px) {
+
+
+
+    .banner-trabalhe {
+        min-height: 720px;
+    }
+
+    .banner-conteudo {
+        padding: 70px 0 80px;
+    }
+
+    .banner-conteudo h1 {
+        letter-spacing: -4px;
+    }
+
+    .apresentacao-container,
+    .candidatura-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .apresentacao-titulo h2,
+    .candidatura-texto h2 {
+        letter-spacing: -3px;
+    }
+
+    .candidatura-texto {
+        position: static;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+
+    .banner-trabalhe {
+        min-height: 560px;
+        height: auto;
+    }
+
+    .banner-conteudo {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 4rem;
+        letter-spacing: -3px;
+    }
+
+    .banner-conteudo p {
+        font-size: 1rem;
+    }
+
+    .apresentacao,
+    .beneficios,
+    .areas,
+    .candidatura {
+        padding: 85px 0;
+    }
+
+    .titulo-secao {
+        margin-bottom: 50px;
+    }
+
+    .titulo-secao h2 {
+        letter-spacing: -2px;
+    }
+
+    .beneficios-grid,
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-card,
+    .area-card {
+        min-height: 250px;
+    }
+
+    .formulario-candidatura {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+/* ==================== AJUSTES RESPONSIVOS FINAIS ==================== */
+@media (max-width: 650px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    .banner-conteudo,
+    .apresentacao-container,
+    .candidatura-container,
+    .formulario-candidatura {
+        min-width: 0;
+    }
+
+    .formulario-candidatura input,
+    .formulario-candidatura select,
+    .formulario-candidatura textarea {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .banner-conteudo h1 {
+        font-size: clamp(2.8rem, 14vw, 3.6rem);
+    }
+}

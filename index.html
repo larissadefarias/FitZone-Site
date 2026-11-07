@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FitZone: roupas, calçados e acessórios esportivos para acompanhar sua evolução.">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>FitZone | Loja Esportiva</title>
+</head>
+
+<body>
+  <!-- FUNDO ESCURO DO CARRINHO -->
+  <div class="carrinho-overlay" id="carrinho-overlay"></div>
+
+  <!-- CARRINHO LATERAL -->
+  <aside class="carrinho" id="carrinho" aria-label="Carrinho de compras" aria-hidden="true">
+
+    <div class="carrinho-header">
+
+      <div>
+        <span class="eyebrow">Sua seleção</span>
+        <h2>Meu carrinho</h2>
+      </div>
+
+      <button class="botao-fechar" id="fechar-carrinho" type="button" aria-label="Fechar carrinho">
+        ×
+      </button>
+
+    </div>
+
+    <div class="carrinho-itens" id="carrinho-itens"></div>
+
+    <div class="carrinho-footer">
+
+      <div class="total-linha">
+        <span>Total</span>
+
+        <strong id="total">
+          R$ 0,00
+        </strong>
+      </div>
+
+      <button class="btn-finalizar" type="button">
+        Finalizar compra
+      </button>
+
+    </div>
+
+  </aside>
+  <!-- ==================== CABEÇALHO FITZONE ==================== -->
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Navegação principal">
+      <!-- LOGO -->
+      <a href="index.html" class="logo" aria-label="Página inicial da FitZone">
+        <img class="img-logo logo-clara" src="img/logo.png" alt="FitZone">
+        <img class="img-logo logo-escura" src="img/logo-claro.png" alt="FitZone">
+      </a>
+      <!-- PESQUISA -->
+      <form class="search-box" role="search">
+        <input class="box-search" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
+        <button class="search-button" type="submit" aria-label="Pesquisar">
+          <img src="img/search.png" alt="">
+        </button>
+      </form>
+      <!-- NAVEGAÇÃO -->
+      <ul class="nav-list">
+        <!-- PRODUTOS -->
+        <li class="dropdown">
+          <button class="submenu" type="button" aria-expanded="false">
+            Produtos
+            <span class="seta-menu"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html#produtos">Tênis</a>
+            <a href="index.html#produtos">Camisas</a>
+            <a href="index.html#produtos">Leggings</a>
+            <a href="index.html#novidades">Chuteiras</a>
+          </div>
+        </li>
+        <!-- SOBRE NÓS -->
+        <li class="dropdown">
+          <button class="submenu" type="button" aria-expanded="false">
+            Sobre Nós
+            <span class="seta-menu"></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="sobre.html">Nossa história</a>
+            <a href="trabalhe.html">Trabalhe conosco</a>
+            <a href="contato.html">Contato</a>
+          </div>
+        </li>
+        <!-- PROMOÇÕES -->
+        <li>
+          <a class="nav-link destaque" href="index.html#promocoes">
+            Promoções
+          </a>
+        </li>
+        <!-- CARRINHO -->
+        <li class="icon-carrinho">
+          <button class="icon-button button-carrinho" type="button" aria-label="Abrir carrinho">
+            <img class="img-carrinho" src="img/carrinho.png" alt="">
+            <span id="contador-carrinho" class="contador-carrinho">
+              0
+            </span>
+          </button>
+        </li>
+        <!-- LOGIN -->
+        <li class="icon-login">
+          <a class="icon-button button-login" href="login.html" aria-label="Entrar na conta">
+            <img class="img-login" src="img/login.png" alt="">
+          </a>
+        </li>
+      </ul>
+      <!-- MODO ESCURO -->
+      <button class="theme-btn" id="theme-button" type="button" aria-label="Alternar entre tema claro e escuro">
+        <img src="img/darkmode.png" alt="" class="icone-tema">
+      </button>
+      <!-- MENU MOBILE -->
+      <button class="menu-mobile-btn" id="menu-mobile-btn" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero-imagem">
+        <img src="img/fitzone.jpg.png" alt="FitZone">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-conteudo">
+        <span class="hero-subtitulo">
+          MOVIMENTO • PERFORMANCE • EVOLUÇÃO
+        </span>
+        <p>
+          Descubra roupas, calçados e acessórios desenvolvidos para acompanhar sua rotina,
+          elevar sua performance e transformar cada treino em uma nova conquista.
+        </p>
+
+        <div class="hero-botoes">
+
+          <a href="#produtos" class="botao-principal">
+            Explorar produtos
+            <span>→</span>
+          </a>
+          <a href="sobre.html" class="botao-secundario">
+            Conheça a FitZone
+          </a>
+        </div>
+      </div>
+      <div class="hero-indicadores">
+        <div>
+          <strong>+5.000</strong>
+          <span>Clientes satisfeitos</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>Produtos originais</span>
+        </div>
+        <div>
+          <strong>24h</strong>
+          <span>Suporte ao cliente</span>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== BENEFÍCIOS ==================== -->
+    <section class="beneficios-loja">
+      <article class="beneficio-item">
+        <span class="beneficio-numero">01</span>
+        <div>
+          <h3>Frete rápido</h3>
+          <p>Entregamos seus produtos para todo o Brasil.</p>
+        </div>
+      </article>
+      <article class="beneficio-item">
+        <span class="beneficio-numero">02</span>
+        <div>
+          <h3>Compra segura</h3>
+          <p>Proteção e segurança durante todo o pagamento.</p>
+        </div>
+      </article>
+      <article class="beneficio-item">
+        <span class="beneficio-numero">03</span>
+        <div>
+          <h3>Até 10x sem juros</h3>
+          <p>Mais liberdade para você escolher seus produtos.</p>
+        </div>
+      </article>
+    </section>
+    <!-- ==================== PRODUTOS ==================== -->
+    <section class="secao produtos" id="produtos">
+      <div class="secao-cabecalho">
+        <div>
+          <span class="eyebrow">
+            ESCOLHAS DA SEMANA
+          </span>
+          <h2>
+            Produtos para<br>
+            acompanhar sua evolução.
+          </h2>
+        </div>
+        <a href="#novidades" class="link-seta">
+          Ver lançamentos
+          <span>→</span>
+        </a>
+      </div>
+      <div class="produtos-container">
+        <!-- PRODUTO 1 -->
+        <article class="produto" data-nome="Tênis de Corrida" data-preco="199.90">
+          <div class="produto-imagem">
+            <span class="badge">Mais vendido</span>
+            <img src="img/tenis1.png" alt="Tênis de Corrida">
+            <button class="produto-favorito" type="button" aria-label="Adicionar aos favoritos">
+              ♡
+            </button>
+          </div>
+          <div class="produto-info">
+            <span class="categoria">Calçados</span>
+            <h3>Tênis de Corrida</h3>
+            <div class="estrelas" aria-label="5 estrelas">
+              ★★★★★
+            </div>
+            <p class="preco">R$ 199,90</p>
+            <p class="parcelamento">
+              10x de R$ 19,99 sem juros
+            </p>
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+          </div>
+        </article>
+        <!-- PRODUTO 2 -->
+        <article class="produto" data-nome="Camisa Esportiva" data-preco="89.90">
+          <div class="produto-imagem">
+            <span class="badge">Novo</span>
+            <img src="img/camisa1.png" alt="Camisa Esportiva">
+            <button class="produto-favorito" type="button" aria-label="Adicionar aos favoritos">
+              ♡
+            </button>
+          </div>
+          <div class="produto-info">
+            <span class="categoria">Vestuário</span>
+            <h3>Camisa Esportiva</h3>
+            <div class="estrelas">★★★★★</div>
+            <p class="preco">R$ 89,90</p>
+            <p class="parcelamento">
+              3x de R$ 29,97 sem juros
+            </p>
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+          </div>
+        </article>
+
+
+        <!-- PRODUTO 3 -->
+
+        <article class="produto" data-nome="Calça Legging Feminina" data-preco="99.90">
+
+          <div class="produto-imagem">
+
+            <span class="badge">Oferta</span>
+
+            <img src="img/calcalegging.png" alt="Calça Legging Feminina">
+
+            <button class="produto-favorito" type="button" aria-label="Adicionar aos favoritos">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Fitness</span>
+
+            <h3>Calça Legging Feminina</h3>
+
+            <div class="estrelas">★★★★★</div>
+
+            <p class="preco">R$ 99,90</p>
+
+            <p class="parcelamento">
+              4x de R$ 24,98 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 4 -->
+
+        <article class="produto" data-nome="Bermuda Masculina" data-preco="89.90">
+
+          <div class="produto-imagem">
+
+            <span class="badge">Conforto</span>
+
+            <img src="img/bermuda1.png" alt="Bermuda Masculina">
+
+            <button class="produto-favorito" type="button" aria-label="Adicionar aos favoritos">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Vestuário</span>
+
+            <h3>Bermuda Masculina</h3>
+
+            <div class="estrelas">★★★★★</div>
+
+            <p class="preco">R$ 89,90</p>
+
+            <p class="parcelamento">
+              3x de R$ 29,97 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PROPÓSITO ==================== -->
+
+    <section class="proposito">
+
+      <div class="proposito-imagem">
+        <img src="img/banner-fitzone.png" alt="Coleção esportiva FitZone">
+      </div>
+
+      <div class="proposito-overlay"></div>
+
+      <div class="proposito-conteudo">
+
+        <span>O NOSSO PROPÓSITO</span>
+
+        <h2>
+          Não é apenas esporte.<br>
+          É transformação.
+        </h2>
+
+        <p>
+          Acreditamos que cada treino, cada movimento e cada
+          escolha fazem parte de uma jornada maior. A FitZone
+          existe para acompanhar você em todas essas etapas.
+        </p>
+
+        <a href="sobre.html">
+          Conheça nossa história
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== CATEGORIAS ==================== -->
+
+
+    <!-- ==================== PROMOÇÃO ==================== -->
+
+    <section class="promocao" id="promocoes">
+
+      <div class="promocao-conteudo">
+
+        <span>OFERTA ESPECIAL</span>
+
+        <h2>
+          Até 60% OFF
+        </h2>
+
+        <p>
+          Aproveite condições especiais em produtos
+          selecionados por tempo limitado.
+        </p>
+
+        <a href="#produtos">
+          Ver ofertas
+          <span>→</span>
+        </a>
+
+      </div>
+
+      <div class="promocao-detalhe">
+        <strong>60</strong>
+        <span>% OFF</span>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== NOVIDADES ==================== -->
+
+    <section class="secao novidades" id="novidades">
+
+      <div class="secao-cabecalho">
+
+        <div>
+
+          <span class="eyebrow">
+            NOVOS PRODUTOS
+          </span>
+
+          <h2>
+            Chuteiras em destaque.
+          </h2>
+
+        </div>
+
+        <p class="secao-descricao">
+          Modelos desenvolvidos para proporcionar estabilidade,
+          controle e confiança em campo.
+        </p>
+
+      </div>
+
+      <div class="novidades-container">
+
+        <article class="card-novidade" data-nome="Chuteira Nike" data-preco="899.90">
+
+          <div class="produto-imagem">
+            <img src="img/chuteira-nike.jpeg" alt="Chuteira Nike">
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Nike</span>
+
+            <h3>Chuteira Nike</h3>
+
+            <p class="preco">R$ 899,90</p>
+
+            <p class="parcelamento">
+              10x de R$ 89,99 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="card-novidade" data-nome="Chuteira Umbro" data-preco="1189.90">
+
+          <div class="produto-imagem">
+            <img src="img/chuteira-umbro.png" alt="Chuteira Umbro">
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Umbro</span>
+
+            <h3>Chuteira Umbro</h3>
+
+            <p class="preco">R$ 1.189,90</p>
+
+            <p class="parcelamento">
+              10x de R$ 118,99 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="card-novidade" data-nome="Chuteira Adidas" data-preco="1599.90">
+
+          <div class="produto-imagem">
+            <img src="img/chuteira-adidas.jpg" alt="Chuteira Adidas">
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Adidas</span>
+
+            <h3>Chuteira Adidas</h3>
+
+            <p class="preco">R$ 1.599,90</p>
+
+            <p class="parcelamento">
+              10x de R$ 159,99 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="card-novidade" data-nome="Chuteira Puma" data-preco="989.90">
+
+          <div class="produto-imagem">
+            <img src="img/chuteira-puma.png" alt="Chuteira Puma">
+          </div>
+
+          <div class="produto-info">
+
+            <span class="categoria">Puma</span>
+
+            <h3>Chuteira Puma</h3>
+
+            <p class="preco">R$ 989,90</p>
+
+            <p class="parcelamento">
+              10x de R$ 98,99 sem juros
+            </p>
+
+            <button class="btn-comprar" type="button">
+              Adicionar ao carrinho
+              <span>+</span>
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== CHAMADA FINAL ==================== -->
+
+    <section class="chamada-final">
+
+      <div>
+
+        <span>FAÇA PARTE DA FITZONE</span>
+
+        <h2>
+          Transforme movimento em conquista.
+        </h2>
+
+      </div>
+
+      <div class="chamada-final-direita">
+
+        <p>
+          Descubra produtos feitos para acompanhar sua rotina
+          e ajudar você a chegar ainda mais longe.
+        </p>
+
+        <a href="#produtos">
+          Começar agora
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================== POPUP ==================== -->
+
+  <div id="popup-anuncio" class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+
+    <div class="popup-content">
+
+      <button class="popup-close" type="button" aria-label="Fechar">
+        ×
+      </button>
+
+      <img src="img/promo-banner.gif" alt="Promoção FitZone" class="popup-gif">
+
+      <span class="eyebrow">OFERTA ESPECIAL</span>
+
+      <h2 id="popup-title">
+        Até 60% OFF
+      </h2>
+
+      <p>
+        Aproveite descontos selecionados por tempo limitado.
+      </p>
+
+      <a href="#produtos" class="popup-btn">
+        Ver ofertas
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== RODAPÉ ==================== -->
+
+  <footer class="footer">
+
+    <div class="rodape">
+
+      <div class="footer-brand">
+
+        <img src="img/logo-claro.png" alt="FitZone">
+
+        <p>
+          Movimento, estilo e performance em um só lugar.
+        </p>
+
+      </div>
+      <!--INSTITUCIONAL-->
+      <div class="col">
+
+        <h3>Institucional</h3>
+
+        <a href="sobre.html">Sobre nós</a>
+
+        <a href="trabalhe.html">
+          Trabalhe conosco
+        </a>
+
+      </div>
+      <!--ATENDIMENTOS-->
+      <div class="col">
+
+        <h3>Atendimento</h3>
+
+        <a href="#">Central de ajuda</a>
+        <a href="#">Trocas e devoluções</a>
+        <a href="#">Política de privacidade</a>
+
+      </div>
+      <!--PAGAMENTOS-->
+      <div class="col">
+
+        <h3>Pagamento</h3>
+
+        <div class="pagamentos">
+
+          <img src="img/visa.png" alt="Visa">
+
+          <img src="img/mastercard.png" alt="Mastercard">
+
+          <img src="img/pix.png" alt="Pix">
+
+        </div>
+
+      </div>
+      <!--REDES SOCIAIS-->
+      <div class="col">
+
+        <h3>Redes sociais</h3>
+
+        <div class="sociais">
+
+          <a href="https://www.instagram.com" aria-label="Instagram">
+            <img src="img/instagram.png" alt="">
+          </a>
+
+          <a href="https://www.facebook.com" aria-label="Facebook">
+            <img src="img/facebook.png" alt="">
+          </a>
+
+          <a href="https://www.whatsapp.com" aria-label="WhatsApp">
+            <img src="img/whatsapp.png" alt="">
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 FitZone
+    </p>
+
+  </footer>
+
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    Produto adicionado ao carrinho!
+  </div>
+
+  <script src="header.js"></script>
+  <script src="javascript.js"></script>
+
+
+</body>
+
+</html>
